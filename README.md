@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE :15/2/24
+## NAME :B Naresh																			             
+## ROLLNUMBER :212221080012
+## DEPARTMENT mechanical engineering
 
 
 ## AIM:
@@ -35,8 +35,11 @@ Clock Speed	16 MHz
  
 ![image](https://user-images.githubusercontent.com/36288975/163530394-115baee4-7ed1-49fe-9cce-d7b625e11e85.png)
 
+
 FIGURE-01
 ![image](https://user-images.githubusercontent.com/36288975/163530431-4d390e98-0942-42d8-95b8-f57d348e6ad8.png)
+![Screenshot 2024-05-06 165545](https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/167073142/54a7fcb5-a4be-4774-897f-808ca0ad4e29)
+
 
 FIGURE-02
 ## PROCEDURE 
@@ -53,6 +56,8 @@ FIGURE-02
 
 
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
+![Screenshot 2024-05-06 165526](https://github.com/vasanthkumarch/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/167073142/d0cb6013-e6ce-4657-9e4b-e827be83f33b)
+
 
 
 
@@ -62,6 +67,30 @@ FIGURE -03
 
 
 ## PROGRAM 
+```
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(pushbutton,INPUT);
+}
+
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+{
+  digitalWrite(led, HIGH);
+  delay(500); // Wait for 1000 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(500); // Wait for 1000 millisecond(s)
+}
+  else
+  { delay(500);
+   digitalWrite(led, LOW);
+  }
+}
+```
  
  
 
